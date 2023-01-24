@@ -13,17 +13,26 @@
     <h3 class="space">Your Emergency Contact</h3>
     <form #form="ngForm" (ngSubmit)="savecontact()">
       <ion-item>
-        <ion-label>contact name</ion-label>
+        <ion-label>Contact Name</ion-label>
         <ion-input type="text" [(ngModel)]="contact.name" name="Name"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>contact name</ion-label>
-        <ion-input type="text" [(ngModel)]="contact.number" name="Number"></ion-input>
+        <ion-label>Contact Number</ion-label>
+        <ion-input type="number" [(ngModel)]="contact.number" name="Number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Your Name</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.username" name="Name"></ion-input>
       </ion-item>
 
-      <ion-button class="contact_btn space" color="primary" onclick="this.navigate()">
-        <ion-icon  name="add-outline" color="dark"></ion-icon><span class="contact_txt">contacts</span> 
+      <ion-item>
+        <ion-label>Your Number</ion-label>
+        <ion-input type="number" [(ngModel)]="contact.usernumber" name="Number"></ion-input>
+      </ion-item>
+
+      <ion-button class="contact_btn space" color="primary" type="submit">
+        <span class="contact_txt"> Save </span> 
       </ion-button>
     </form>
     

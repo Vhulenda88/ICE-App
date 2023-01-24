@@ -20,13 +20,17 @@ export class Tab2Page {
 
   contact={
     name:"",
-    number:""
+    number:"", 
+    username:"",
+    usernumber:""
   }
   savecontact(){
     
     localStorage.setItem("contactname",this.contact.name)
     localStorage.setItem("contactnumber",this.contact.number)
-    
+    localStorage.setItem("username",this.contact.username)
+    localStorage.setItem("usernumber",this.contact.usernumber)
+    console.log(localStorage.getItem("contactname"))
   }
 
 }
