@@ -1,0 +1,7 @@
+{
+  "name": "ICE App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
