@@ -1,16 +1,38 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Tab 2
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="center">
+    <ion-img class="main_logo" src="../../assets/EC_main.svg"></ion-img>
+    <h1 class="space">I.C.E</h1>
+    <h3 class="space">Your Emergency Contact</h3>
+    <form #form="ngForm" (ngSubmit)="savecontact()">
+      <ion-item>
+        <ion-label>contact name</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.name" name="Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>contact name</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.number" name="Number"></ion-input>
+      </ion-item>
+
+      <ion-button class="contact_btn space" color="primary" onclick="this.navigate()">
+        <ion-icon  name="add-outline" color="dark"></ion-icon><span class="contact_txt">contacts</span> 
+      </ion-button>
+    </form>
+    
+    <!-- <ion-list>
+      <ion-item *ngFor="contact in contacts">
+       <h3>{{contact.name}}</h3> 
+       <h3>{{contact.number}}</h3>
+      </ion-item>
+    </ion-list> -->
+  </div>
 
 </ion-content>
